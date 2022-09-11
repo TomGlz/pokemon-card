@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+:root{
+    --Dark_cyan: hsl(185, 75%, 39%);
+    --Very_dark_desaturated_blue: hsl(229, 23%, 23%);
+    --Dark_grayish_blue: hsl(227, 10%, 46%);
+    --Dark_gray: hsl(0, 0%, 59%);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--Dark_cyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 51vw bottom 20vh, left 45vw top 50vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+}
+
+.card-container{
+    margin: 140px auto 50px;
+    width: 330px;
+    height: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.circles{
+    background: url(images/bg-pattern-card.svg);
+    height: 140px;
+}
+
+.photo{
+    position: absolute;
+    top: 10px;
+    left: 18%;
+   
+    height: 200px;
+}
+.photo img{
+    width: 200px;
+    height: 200px;
+}
+.personal-data-container{
+    background-color: white;
+    height: 150px;
+    padding: 75px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.name{
+    font-weight: 700;
+    color: var(--Very_dark_desaturated_blue);
+}
+
+.age, .city{
+    color: var(--Dark_gray);
+}
+
+.city{
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.stats-container{
+    background-color: white;
+    border-top: 1px solid var(--Dark_gray);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+}
+
+.stats{
+    text-align: center;
+}
+
+.numbers{
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--Very_dark_desaturated_blue);
+}
+.units{
+    font-size: 10px;
+    color: var(--Dark_gray);
+    letter-spacing: 2px;
+}
+.attribution { font-size: 15px; text-align: center; }
+.attribution a { color: white; }
+.refresh-icon{
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    right:0px;
+    cursor: pointer;
+}
+
+@media screen and (min-width:1440px) {
+    .card-container{
+        width: 350px;
+    }
+    
+}

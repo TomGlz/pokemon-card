@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  
+  <title>Pokemon card</title>
+
+  
+</head>
+<body>
+
+  <div class="card-container">
+    <div class="refresh-icon" onclick="location.reload()"><i class="bi bi-arrow-clockwise"></i></div>
+    <div class="circles"></div>
+    <div class="photo" data-aos="zoom-in" data-aos-duration="1500">
+      <img id="image" alt="Pokemon img">
+    </div>
+    
+    <div class="personal-data-container">
+      <span class="name" id="name"></span>
+      <span class="age" id="hp"></span>
+      <div class="city" id="type"></div>
+    </div>
+
+    <div class="stats-container">
+      <div class="stats" data-aos="fade-up" data-aos-duration="1500">
+        <div class="numbers" id="attack"></div>
+        <div class="units">Attack</div>
+      </div>
+
+      <div class="stats" data-aos="fade-up" data-aos-duration="1500">
+        <div class="numbers" id="defense"></div>
+        <div class="units">Defense</div>
+      </div>
+
+      <div class="stats" data-aos="fade-up" data-aos-duration="1500">
+        <div class="numbers" id="speed"></div>
+        <div class="units">Speed</div>
+      </div>
+      
+    </div>
+
+  </div>
+
+
+
+  <div class="attribution">
+    Coded by <a href="https://github.com/TomGlz">Tom Glz</a>.
+  </div>
+<script src="main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</body>
+</html>
