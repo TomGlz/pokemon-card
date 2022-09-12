@@ -20,9 +20,9 @@ body{
 }
 
 .card-container{
-    margin: 140px auto 50px;
+    margin: 80px auto 30px;
     width: 330px;
-    height: 380px;
+    height: 450px;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -48,7 +48,7 @@ body{
 .personal-data-container{
     background-color: white;
     height: 150px;
-    padding: 75px;
+    padding: 70px 0px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -92,17 +92,33 @@ body{
 }
 .attribution { font-size: 15px; text-align: center; }
 .attribution a { color: white; }
-.refresh-icon{
+.search{
+    width: 330px;
+    margin: 20px auto;
+   
+
+}
+.input-search{
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0;
+}
+.pokeball img{
+    position: absolute;
+    right: 0;
+    width: 50px;
+    cursor: pointer;
+    z-index: 2;
+
+}
+.icon-shuffle{
     position: absolute;
     color: white;
-    font-size: 2em;
-    right:0px;
-    cursor: pointer;
+    font-size: 20px;
+    right: 14px;
+    top: 40px;
 }
-
-@media screen and (min-width:1440px) {
-    .card-container{
-        width: 350px;
-    }
-    
+.spinner-img{
+    position: absolute;
+    top:115px;
+    left: 90px;
 }
