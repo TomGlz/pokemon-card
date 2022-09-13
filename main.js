@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     search();
     addAnimate();
+    document.oncontextmenu = function(){return false}
     
 });
 
