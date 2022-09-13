@@ -173,7 +173,7 @@ body{
 }
 
 .flip-card {
-    background-color: transparent;
+    
     
     perspective: 1000px;
   }
