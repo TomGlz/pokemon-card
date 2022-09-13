@@ -28,9 +28,10 @@ body{
 }
 
 .glass{
-    background: rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3); */
+    background-color: white;
     height: 200px;
     /* backdrop-filter: blur(3px);
 -webkit-backdrop-filter: blur(3px); */
