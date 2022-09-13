@@ -20,22 +20,26 @@ body{
 }
 
 .card-container{
-    margin: 80px auto 30px;
+    margin: 40px auto 30px;
     width: 330px;
-    height: 450px;
-    border-radius: 10px;
-    overflow: hidden;
+    height: 420px;
+    
     position: relative;
 }
 
-.circles{
-    background: url(images/bg-pattern-card.svg);
-    height: 140px;
+.glass{
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 200px;
+    /* backdrop-filter: blur(3px);
+-webkit-backdrop-filter: blur(3px); */
 }
+
 
 .photo{
     position: absolute;
-    top: 10px;
+    top: 0px;
     left: 18%;
    
     height: 200px;
@@ -44,14 +48,17 @@ body{
     width: 200px;
     height: 200px;
     
+    
 }
+
 .personal-data-container{
     background-color: white;
-    height: 150px;
-    padding: 70px 0px;
+    height: 130px;
+    padding: 20px 0px;
     box-sizing: border-box;
     text-align: center;
 }
+
 
 .name{
     font-weight: 700;
@@ -75,7 +82,13 @@ body{
     align-items: center;
     height: 90px;
 }
-
+.stats-container-back{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+}
 .stats{
     text-align: center;
 }
@@ -90,7 +103,7 @@ body{
     color: var(--Dark_gray);
     letter-spacing: 2px;
 }
-.attribution { font-size: 15px; text-align: center; }
+.attribution { font-size: 15px; text-align: right; margin-right: 5px; }
 .attribution a { color: white; }
 .search{
     width: 330px;
@@ -99,26 +112,98 @@ body{
 
 }
 .input-search{
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0;
+    border-radius: 0 ;
+}
+.shuffle{
+    margin: 0 auto;
+    width: 50px;
+    
+}
+.shuffle-txt{
+    color: white;
+    position: relative;
+    left: -9px;
+    
 }
 .pokeball img{
-    position: absolute;
-    right: 0;
+    
     width: 50px;
     cursor: pointer;
     z-index: 2;
+    transition: transform .2s;
+    
+    
 
 }
-.icon-shuffle{
-    position: absolute;
+.pokeball img:hover {
+
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+/* .icon-shuffle{
+    margin-top: 300px;
     color: white;
     font-size: 20px;
-    right: 14px;
-    top: 40px;
+    backdrop-filter: blur(5px);
+
+    
+} */
+.pointer-icon{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    right:10px;
+}
+.number-pokemon{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    left:10px;
 }
 .spinner-img{
     position: absolute;
     top:115px;
     left: 90px;
 }
+.black-filter{
+    filter: brightness(0);
+    -moz-transform: rotateY(-180deg);
+     -o-transform: rotateY(-180deg);
+     -webkit-transform: rotateY(-180deg);
+     transform: rotateY(-180deg);
+}
+
+.flip-card {
+    background-color: transparent;
+    
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(-180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+
+  
+  .flip-card-back {
+   
+    transform: rotateY(180deg);
+    color: white;
+  }

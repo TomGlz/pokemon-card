@@ -1,61 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
   <title>Pokemon card</title>
 </head>
+
 <body>
 
-  <div class="card-container">
-    <div class="pokeball" onclick="location.reload()"><img class="animate__animated animate__heartBeat" src="images/pokeball.png" alt=""></div>
-    <div class="icon-shuffle" onclick="location.reload()"><i class="bi bi-shuffle"></i></div>
-    <div class="circles"></div>
-    <div class="photo" id="loading-img">
-      
-    </div>
-    
-    <div class="personal-data-container">
-      <span class="name" id="name"></span>
-      <span class="age" id="hp"></span>
-      <div class="city" id="type"></div>
-    </div>
+  <div class="card-container flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <div class="pointer-icon"><i class="bi bi-hand-index-thumb"></i></div>
+        <div class="number-pokemon" id="id-pokemon">#15</div>
+        <div class="glass"></div>
+        <div class="photo" id="loading-img">
 
-    <div class="stats-container">
-      <div class="stats animate__animated animate__fadeInUp">
-        <div class="numbers" id="attack"></div>
-        <div class="units">Attack</div>
-      </div>
+        </div>
 
-      <div class="stats animate__animated animate__fadeInUp">
-        <div class="numbers" id="defense"></div>
-        <div class="units">Defense</div>
-      </div>
+        <div class="personal-data-container">
+          <div class="name" id="name"></div>
+          <div class="age" id="hp"></div>
+          <div class="city" id="type"></div>
+        </div>
 
-      <div class="stats animate__animated animate__fadeInUp">
-        <div class="numbers" id="speed"></div>
-        <div class="units">Speed</div>
+        <div class="stats-container">
+          <div class="stats" id="attack">
+
+          </div>
+
+          <div class="stats" id="defense">
+
+          </div>
+
+          <div class="stats" id="speed">
+
+          </div>
+
+        </div>
+
       </div>
-      
-    </div>
-    <div class="search input-group mb-3" id="input-search">
-      <span class="input-search input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="input-search form-control" placeholder="Name or #" id="search" onkeyup="tecla()">
+      <div class="flip-card-back">
+
+        <div class="glass"></div>
+        <div class="photo" id="loading-img-back">
+
+        </div>
+
+        <div class="personal-data-container">
+          <span class="name">Abilities</span>
+
+        </div>
+
+        <div class="stats-container-back">
+
+        </div>
+      </div>
     </div>
   </div>
 
- 
 
-  <div class="attribution">
+  <div class="search input-group mb-3" id="input-search">
+    <label class="input-search input-group-text" for="search"><i class="bi bi-search" ></i></label>
+    <input type="text" class="input-search form-control" placeholder="Name or #" id="search" onkeyup="tecla()" autocomplete="off">
+
+  </div>
+  <div class="shuffle">
+    <div class="pokeball" onclick="tecla(), addAnimate()"><img id="pokeball-button" class="" src="images/pokeball.png" alt="">
+      <!-- <span class="icon-shuffle" onclick="tecla(), addAnimate()"><i class="bi bi-shuffle"></i></span> -->
+      
+    </div>
+    <div class="shuffle-txt" onclick="tecla(), addAnimate()">Random</div>
+
+  </div>
+
+  <div class="attribution mt-3">
     Coded by <a href="https://github.com/TomGlz">Tom Glz</a>
   </div>
-<script src="main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+ 
 
 </body>
+
 </html>
