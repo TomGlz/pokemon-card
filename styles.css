@@ -65,7 +65,10 @@ body{
     font-weight: 700;
     color: var(--Very_dark_desaturated_blue);
 }
-
+.ability{
+    margin-top: 20px;
+    color: var(--Very_dark_desaturated_blue);
+}
 .age, .city{
     color: var(--Dark_gray);
 }
@@ -200,11 +203,7 @@ body{
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-  
-
-  
   .flip-card-back {
-   
     transform: rotateY(180deg);
     color: white;
   }
